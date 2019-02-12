@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 /**
  *
  */
 
-$name = 'Anton';
+$name = 'Василий';
 
 var_dump($name);
