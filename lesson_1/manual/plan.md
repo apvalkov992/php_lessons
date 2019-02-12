@@ -4,4 +4,3 @@
 * [Типы данных](/references/php/types.md)
 * [Переменные](/references/php/variables.md)
 * [Константы](/references/php/constants.md)
-* Операции с переменными
