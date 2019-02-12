@@ -4,5 +4,5 @@
 ### Добро пожаловать на курсы)))
 
 
-[GitHub справочник](/references/github.md)
-[Уроки](/references/lessons.md)
+* [GitHub справочник](/references/github.md)
+* [Уроки](/references/lessons.md)
