@@ -5,4 +5,11 @@
 
 $name = 'Egor';
 
-var_dump($name);
+
+
+$int = '1';
+$bool = 'true';
+$real = '1.25';
+$string = 'String is here';
+$empty = 'NULL';
+
