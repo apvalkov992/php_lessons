@@ -5,3 +5,4 @@
 
 
 [GitHub справочник](/references/github.md)
+[Уроки](/references/lessons.md)
