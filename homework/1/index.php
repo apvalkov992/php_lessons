@@ -3,6 +3,6 @@
  *
  */
 
-$name = 'Anton';
+$name = 'Maksim';
 
 var_dump($name);
