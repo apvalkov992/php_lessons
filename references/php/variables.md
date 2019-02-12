@@ -6,13 +6,13 @@
 
 ```php
 <?php
-$var = 'Боб';
-$Var = 'Джо';
-echo "$var, $Var";      // выведет "Боб, Джо"
-
-$4site = 'еще нет';     // неверно; начинается с цифры
-$_4site = 'еще нет';    // верно; начинается с символа подчеркивания
-$täyte = 'mansikka';    // верно; 'ä' это (Расширенный) ASCII 228.
+    $var = 'Боб';
+    $Var = 'Джо';
+    echo "$var, $Var";      // выведет "Боб, Джо"
+    
+    $4site = 'еще нет';     // неверно; начинается с цифры
+    $_4site = 'еще нет';    // верно; начинается с символа подчеркивания
+    $täyte = 'mansikka';    // верно; 'ä' это (Расширенный) ASCII 228.
 ?>
 ```
 
@@ -22,14 +22,14 @@ $täyte = 'mansikka';    // верно; 'ä' это (Расширенный) ASC
 
 ```php
 <?php
-$a = 1; /* глобальная область видимости */ 
-
-function test()
-{
-    echo $a; /* ссылка на переменную в локальной области видимости */ 
-} 
-
-test();
+    $a = 1; /* глобальная область видимости */ 
+    
+    function test()
+    {
+        echo $a; /* ссылка на переменную в локальной области видимости */ 
+    } 
+    
+    test();
 ?>
 ```
 
@@ -37,18 +37,18 @@ test();
 
 ```php
 <?php
-$a = 1;
-$b = 2;
-
-function Sum()
-{
-    global $a, $b;
-
-    $b = $a + $b;
-} 
-
-Sum();
-echo $b;
+    $a = 1;
+    $b = 2;
+    
+    function Sum()
+    {
+        global $a, $b;
+    
+        $b = $a + $b;
+    } 
+    
+    Sum();
+    echo $b;
 ?>
 ```
 
@@ -60,12 +60,12 @@ echo $b;
 
 ```php
 <?php
-function test()
-{
-    static $a = 0;
-    echo $a;
-    $a++;
-}
+    function test()
+    {
+        static $a = 0;
+        echo $a;
+        $a++;
+    }
 ?>
 ```
 
@@ -76,13 +76,11 @@ function test()
 
 ```php
 <?php
-$a = 'hello';
-$$a = 'world';
-echo "$a ${$a}"; //hello world
-echo "$a $hello"; //hello world
+    $a = 'hello';
+    $$a = 'world';
+    echo "$a ${$a}"; //hello world
+    echo "$a $hello"; //hello world
 ?>
 ```
-
-### HTML-формы (GET и POST)
 
 
