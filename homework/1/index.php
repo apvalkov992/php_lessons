@@ -3,6 +3,6 @@
  *
  */
 
-$name = 'Anton';
+$name = 'Игорь';
 
 var_dump($name);
