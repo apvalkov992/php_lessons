@@ -9,7 +9,7 @@ $var_int = 666;
 $var_float = 2.15;
 $var_string = "Kirill"; 
 $var_array = array(
-				   "login" => "superaft", 
+                   "login" => "superaft", 
                    "branchName" => "KOgula", 
                   );
 
@@ -24,3 +24,15 @@ echo "<br>";
 var_dump($var_string);
 echo "<br>";
 var_dump($var_array);
+echo "<br>";
+
+/* ДЗ */
+
+$name = "Kirill";  // Создать переменную содержащую своё имя
+$kirill = "Ogula"; // Создать переменную названием которой будет своё имя а значением фамилия
+define("AGE", 18); // Создать константу содержащую количество полных лет
+static $gender = "male"; // Создать статическую переменную содержащую пол
+global $city; // Создать глобальную переменную содержащую название города 
+$city = "donetsk";         
+unset($name, $kirill, $gender, $city); // Удалить все ранее созданные переменные
+?>
