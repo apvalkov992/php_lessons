@@ -15,7 +15,7 @@ $stringPer = 'моя переменная';
 
 $nullPer = null;
 
-/*var_dump($name);*/
+var_dump($name);
 
 
 /*               ДОМАШКА                          */
@@ -38,7 +38,7 @@ $city = 'Donetsk';
 echo $city. "<br>";
 
 
-/*unset($name, $Igor, $gender, $city);	/*Удалить все ранее созданные переменные*/
+unset($name, $Igor, $gender, $city);	/*Удалить все ранее созданные переменные*/
 echo $name. "<br>";
 echo $Igor. "<br>";
 echo $gender. "<br>";
