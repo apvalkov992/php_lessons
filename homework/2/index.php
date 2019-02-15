@@ -1,5 +1,4 @@
 <?php
-
     define('ADULTHOOD',18);
     $products = 'beer';
     $customerAge = 10;
@@ -10,7 +9,6 @@
 
     $customerAmount = 100;
     $productPrice = 50;
-
 
     $customerAge = 15;
     $products = 'beer';
