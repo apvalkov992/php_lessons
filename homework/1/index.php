@@ -8,8 +8,12 @@ $nnn = true;
 $myfloat = 1.22;
 $pusto = null ;
 
+<<<<<<< HEAD
 var_dump($name, $nnn, $myfloat, $pusto);
 echo ("<br><br><br><br>");
+=======
+$name = 'Toxa';
+>>>>>>> 530e11fd9f45df97e1c770159ff52b67c05c8294
 
 
 
