@@ -12,45 +12,38 @@
     $productPrice = 50;
 
 
-
-    if ($customerAge >= ADULTHOOD) 
-        echo $message.'<br>';
-    else
-        echo $wrongAge.'<br>';
-    
-    $mes = ($customerAge >= ADULTHOOD) ? $message : $wrongAge;
-    echo $mes.'<br>';
-?>
-
-<?php
-    if ($customerAge >= ADULTHOOD) :
+    $customerAge = 15;
+    $products = 'beer';
+    if ($customerAge > 0 && $customerAge < ADULTHOOD && $products == 'beer') :
 ?> 
-    <span style="color: green"><?php echo $message.'<br>';?></span>
-<?php
-    else :
-?>
     <span style="color: red"><?php echo $wrongAge.'<br>';?></span>
 <?php
+    elseif ($customerAge >= ADULTHOOD):
+?>
+    <span style="color: green"><?php echo $message.'<br>';?></span>
+<?php
+    else:
+?>
+    <span style="color: green"><?php echo $message.'<br>';?></span>
+<?php 
     endif;
 ?>
 
 <?php
 
-    $customerAge = 21;
-    $customerAmount = 40;
-    if ($customerAge >= ADULTHOOD && $customerAmount >= $productPrice) 
-        echo $message.' Ваша сдача: '. ($customerAmount - $productPrice) .'руб.'.'<br>';
-    else if ($customerAmount <= $productPrice)
-        echo $wrongSum.'<br>';
-    else 
+    $customerAge = 15;
+    $customerAmount = 50;
+    $products = 'lemonade';
+    if ($customerAge > 0 && $customerAge < ADULTHOOD && $products != 'beer' &&  $customerAmount >= $productPrice && $customerAmount != $productPrice) 
+        echo $message.' Ваша сдача: '. ($customerAmount - $productPrice) .' руб.'.'<br>';
+    else if ($customerAge > 0 && $customerAge < ADULTHOOD && $products == 'beer') 
         echo $wrongAge.'<br>';
-
-    $customerAmount = 60;
-    if ($customerAge >= ADULTHOOD && $customerAmount >= $productPrice) 
-        echo $message.' Ваша сдача: '. ($customerAmount - $productPrice) .'руб.'.'<br>';
-    else if ($customerAmount <= $productPrice)
+    else if ($customerAge >= ADULTHOOD && $customerAmount > $productPrice  && $customerAmount != $productPrice) {
+        echo $message.' Ваша сдача: '. ($customerAmount - $productPrice) .' руб.'.'<br>';
+    }
+    else if ($customerAmount < $productPrice)
         echo $wrongSum.'<br>';
-    else 
-        echo $wrongAge.'<br>';
-
+    else {
+        echo $message.'<br>';
+    }
 ?>
