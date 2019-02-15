@@ -5,6 +5,8 @@
 
 $name = 'Димоооооооон *музыка из Бумер*';
 $Dima = 'Дуванов';
+// $name = 'Dima'
+// $$name = 'Duvanov'
 define('AGE',18);
 static $gender = 'Мужской';
 
