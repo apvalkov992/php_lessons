@@ -1,4 +1,5 @@
 <?php
+
     define('ADULTHOOD',18);
     $products = 'beer';
     $customerAge = 10;
@@ -32,6 +33,7 @@
     $customerAge = 15;
     $customerAmount = 50;
     $products = 'lemonade';
+
     if ($customerAge > 0 && $customerAge < ADULTHOOD && $products != 'beer' &&  $customerAmount >= $productPrice && $customerAmount != $productPrice) 
         echo $message.' Ваша сдача: '. ($customerAmount - $productPrice) .' руб.'.'<br>';
     else if ($customerAge > 0 && $customerAge < ADULTHOOD && $products == 'beer') 
@@ -44,4 +46,5 @@
     else {
         echo $message.'<br>';
     }
+
 ?>
