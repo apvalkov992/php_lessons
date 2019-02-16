@@ -45,6 +45,3 @@ City();
 echo $Gorod;
 
 unset($name,$NaUliceSneg, $MoiNomer, $Zapyataya, $MySurname, $RabochiiKod, $MoeImya, $Kirill, $Gender, $Gorod);
-
-echo $MoeImya;
-echo AGE;
