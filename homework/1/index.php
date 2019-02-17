@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-/**
- *
- */
 
 $name = 'My name';
 
@@ -42,6 +38,3 @@ echo "$city <br>";
 unset($my_name, $pavel, $sex, $city);
 ?>
 
-
-
->>>>>>> 1544853dd0c24e797d8fa04898b5b36ed3070d99
