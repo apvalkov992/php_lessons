@@ -35,6 +35,7 @@ echo "$sex <br>";
 echo "$city <br>";
 */
 
+
 unset($my_name, $pavel, $sex, $city);
 ?>
 
