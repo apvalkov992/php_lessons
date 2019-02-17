@@ -37,7 +37,6 @@ global $city; 							/*Создать глобальную переменную 
 $city = 'Donetsk';	
 echo $city. "<br>";
 
-
 unset($name, $Igor, $gender, $city);	/*Удалить все ранее созданные переменные*/
 echo $name. "<br>";
 echo $Igor. "<br>";
