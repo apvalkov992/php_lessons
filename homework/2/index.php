@@ -29,6 +29,7 @@ $price = 1129;
 $cash = 1130;
 $oddMoney = $cash - $price;
 $sum = 'Ваша покупка составила'.' '.$price.' '.'р';
+$change = 'Ваша сдача'.' '.$oddMoney.' '.'р';
 $good = 'Благодарим за покупку!!!';
 
 if (AGE < 18 && in_array('пиво', $alcohol)){
@@ -40,7 +41,7 @@ if (AGE < 18 && in_array('пиво', $alcohol)){
 }else {
     echo $sum;
     echo ' <br/>';
-    echo 'Ваша сдача'.' '.$oddMoney.' '.'р';
+    echo $change;
     echo ' <br/>';
     echo $good;
 }
