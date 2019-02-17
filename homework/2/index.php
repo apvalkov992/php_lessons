@@ -38,7 +38,7 @@ if (AGE < 18 && in_array('пиво', $alcohol)){
 }elseif ($price > $cash){
     echo $account;
 }else {
-    echo 'Ваша покупка составила'.' '.$price.' '.'р';
+    echo $sum;
     echo ' <br/>';
     echo 'Ваша сдача'.' '.$oddMoney.' '.'р';
     echo ' <br/>';
