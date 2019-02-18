@@ -1,6 +1,5 @@
 <?php
 /*Homework*/
-$test='string';
 $goods=['beer', 'potato', 'tomatoes', 'sweets'];
 $good='tomatoes';
 $price=70;
@@ -27,8 +26,9 @@ $cash=200;
 		echo('Since you are'.' '. $price .' '.'rubles.<br>');
 	if($cash<$price)
 		echo('There is not enough'.' '.($price-$cash).' '.'rubles.');
-	   elseif($cash==$price)
+	   elseif($cash==$price){
 	 	echo('Thanks for your purchase! Come again!');
+	 }
 	   else
 	 	echo('Your change'.' '.($cash-$price).' '.'rubles.'.'Thanks for your purchase! Come again!');
 ?>
