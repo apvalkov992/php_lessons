@@ -20,3 +20,5 @@ static $Sex = `male`;
 global $City;
 $City = `Donetsk`;
 unset ($Name, $Alexander, $Sex, $City);
+
+?>
