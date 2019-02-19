@@ -4,6 +4,7 @@
  */
 $name = 'Olga';
 var_dump($name);
+/**    */
 
 $null_var=null;
 var_dump($null_var);
@@ -15,3 +16,5 @@ $str_var='Stroka';
 var_dump($str_var);
 $float_var=252.369;
 var_dump($float_var);
+
+/**  ДЗ  */
