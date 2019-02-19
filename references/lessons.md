@@ -7,3 +7,8 @@
 * [Урок 2](/lesson_2/manual/plan.md)
 
 **Темы**: [Выражения](/references/php/expressions.md), [Операторы](/references/php/operators.md), [Условные управляющие конструкции](/references/php/control_structures/conditional_statements.md)
+
+* [Урок 3](/lesson_3/manual/plan.md)
+
+**Темы**: [Управляющие конструкции подключения файлов](/references/php/control_structures/include.md),
+          [Массивы](/references/php/arrays.md)
