@@ -3,7 +3,6 @@
  *
  */
 
-
 $name = 'Игорь';
 
 $boolPer = false;
