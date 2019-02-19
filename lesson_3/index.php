@@ -28,14 +28,7 @@ $message = 'Hello world!!!!'
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="alert alert-primary text-center" role="alert">
-                <?= $message?>
-            </div>
-            <?php if ($b === 3) :?>
-                <span class="alert alert-success">true</span>
-            <?php  else :?>
-                <span class="alert alert-danger">false</span>
-            <?php endif;?>
+
         </div>
     </div>
 </div>
