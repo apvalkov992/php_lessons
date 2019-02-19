@@ -3,6 +3,7 @@
  *
  */
 
+<<<<<<< HEAD
 $name = 'Kirill';
 
 var_dump($name);
@@ -45,3 +46,8 @@ City();
 echo $Gorod;
 
 unset($name,$NaUliceSneg, $MoiNomer, $Zapyataya, $MySurname, $RabochiiKod, $MoeImya, $Kirill, $Gender, $Gorod);
+=======
+$name = 'My name';
+
+var_dump($name);
+>>>>>>> 40981a6c2b21a60eef185a511f3cbd1b343f28e1
