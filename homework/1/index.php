@@ -3,6 +3,7 @@
  *
  */
 
+<<<<<<< HEAD
 $Name = 'Arkhipov_A';
 $a = ((bool) "true";
 $b = ((int) 2019);
@@ -22,3 +23,8 @@ $City = `Donetsk`;
 unset ($Name, $Alexander, $Sex, $City);
 
 ?>
+=======
+$name = 'My name';
+
+var_dump($name);
+>>>>>>> 40981a6c2b21a60eef185a511f3cbd1b343f28e1
