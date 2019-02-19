@@ -3,6 +3,6 @@
  *
  */
 
-$name = 'Toxa';
+$name = 'Toxa2';
 
 var_dump($name);
