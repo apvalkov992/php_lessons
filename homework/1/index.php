@@ -3,6 +3,7 @@
  *
  */
 
+
 $name = 'Игорь';
 
 $boolPer = false;
@@ -42,3 +43,4 @@ echo $name. "<br>";
 echo $Igor. "<br>";
 echo $gender. "<br>";
 echo $city. "<br>";
+
