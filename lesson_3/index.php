@@ -1,8 +1,3 @@
-<?php
-
-$message = 'Hello world!!!!'
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +23,11 @@ $message = 'Hello world!!!!'
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <div class="alert alert-success">
 
+                <?php include 'data/cart.php'?>
+
+            </div>
         </div>
     </div>
 </div>

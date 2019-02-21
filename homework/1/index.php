@@ -4,6 +4,9 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 51fb0dc61ded9acc2a16bcef03e46676198d1b7f
 $name = 'My name';
 
 var_dump($name);
