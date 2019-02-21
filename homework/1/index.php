@@ -1,5 +1,6 @@
 <?php
- // Home work #1
+
+// Home work #1
 
 $myName = 'Yuriy';
 $Yuriy = 'Gur';
@@ -34,15 +35,3 @@ for ($i = 0; $i++<10;) {
 
 echo "<br>a = $a";
 echo "<br>b = $b";
-     
-
-
-
- 
- 
-
- 
-
-
-
-
