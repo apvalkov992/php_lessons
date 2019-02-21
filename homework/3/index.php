@@ -22,7 +22,7 @@ if ($cards [2][ban] == TRUE) {
   echo nl2br ('Карта заблокирована' . PHP_EOL);
 }
   elseif ($cards [2][ban] !== TRUE) {
-    echo nl2br ('Карта ативна' . PHP_EOL);
+    echo nl2br ('Карта активна' . PHP_EOL);
   }
 
 echo "<hr>";
