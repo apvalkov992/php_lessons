@@ -1,17 +1,43 @@
 <?php
-$my_name = 'Vasiliy';
-$$my_name = 'Guziy';
-define (AGE, 34);
-static $gender = male;
-$town = 'Donetsk';
-global $town;
+/**
+ *
+ */
+/* Самостоятельная работа доработанная*/
+$name = 'Arkadiy4';
+$nnn = true;
+$myfloat = 1.22;
+$pusto = null ;
 
-unset ($my_name, $$my_name, $gender, $town);
 
-echo "$my_name<br>";
-echo "$$my_name<br>";
-echo AGE;
-echo "<br>$gender<br>";
-echo "$town<br>";
+
+/*Домашняя работа 1*/
+echo "  Homework #1 <br>";
+// Определение переменных
+$name = 'Arkadiy'; 		// Имя , строковая переменная
+$arkadiy = "Chekin";	// Фамилия , строковая переменная
+const AGE = 56;			// Возраст , константа , целая
+static $sex = "Male";	// Пол, статическа переменная(необнуляемая за областью видимости)
+global $city; $city = "Donetsk";			// город, глобальная переменная
+
+//Проверка переменных выводом на экран
+echo '<br>' ;
+echo 'name    = ', $name, '<br>';
+echo 'arkadiy = ', $arkadiy, '<br>';
+echo 'AGE     = ', AGE, "<br>";
+echo 'sex     = ', $sex, "<br>";
+echo 'city    = ', $city, "<br>";
+var_dump($name, $arkadiy, AGE, $sex, $city); 
+
+//Удаление переменных
+unset ($name, $arkadiy, $sex, $city);
+//runkit_constant_remove( "AGE") ; undefined function
+
+//Проверка переменных после удаления
+echo '<br><br>' ;
+echo 'name    = ', $name, '<br>';
+echo 'arkadiy = ', $arkadiy, '<br>';
+echo 'AGE     = ', AGE, "<br>";
+echo 'sex     = ', $sex, "<br>";
+echo 'city    = ', $city, "<br>";
+var_dump($name, $arkadiy, AGE, $sex, $city); 
 ?>
-
