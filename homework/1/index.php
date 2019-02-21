@@ -59,4 +59,3 @@ if ($buyer_age < LEGALAGE && $alcohol == true ) { 			//проверка на с�
 }
 
 ?>
-
