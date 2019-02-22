@@ -25,7 +25,49 @@
         <div class="col-md-12">
             <div class="alert alert-success">
 
-                 <?php include 'data/cart.php'?>
+                <?php
+                    $config = require_once 'config/config.php';
+
+//                        0  1  2  3  4  5  6  7  8  9
+                    $a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+
+
+                    /*for ($i = 0; $i <= 10; $i++) {
+                        echo $i . '=';
+                        echo nl2br($a[$i] . PHP_EOL);
+                    }
+
+                    echo "<hr>";
+                    $i = 0;
+
+                    while ($i <= 10) {
+                        echo $i . '=';
+                        echo nl2br($a[$i] . PHP_EOL);
+                        $i++;
+                    }
+
+                    echo "<hr>";
+
+                    $i = 0;
+                    do {
+                        echo $i . '=';
+                        echo nl2br($a[$i] . PHP_EOL);
+                        $i++;
+                    } while($i <= 10);*/
+
+
+                    echo '<pre>';
+
+                    $total = 12000;
+                    $cardType = CARD_TYPE_MIR;
+
+                    foreach ($config['discount'] as $key => $value) {
+                        var_dump($key);
+                        var_dump($value['condition']($total));
+                        echo "<hr>";
+                    }
+
+                ?>
 
             </div>
         </div>
