@@ -26,50 +26,136 @@
             <div class="alert alert-success">
 
                 <?php
-                    $config = require_once 'config/config.php';
+                $config = require_once 'config/config.php';
 
-//                        0  1  2  3  4  5  6  7  8  9
-                    $a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+                //                        0  1  2  3  4  5  6  7  8  9
+                $a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
 
 
-                    /*for ($i = 0; $i <= 10; $i++) {
-                        echo $i . '=';
-                        echo nl2br($a[$i] . PHP_EOL);
+                /*for ($i = 0; $i <= 10; $i++) {
+                    echo $i . '=';
+                    echo nl2br($a[$i] . PHP_EOL);
+                }
+
+                echo "<hr>";
+                $i = 0;
+
+                while ($i <= 10) {
+                    echo $i . '=';
+                    echo nl2br($a[$i] . PHP_EOL);
+                    $i++;
+                }
+
+                echo "<hr>";
+
+                $i = 0;
+                do {
+                    echo $i . '=';
+                    echo nl2br($a[$i] . PHP_EOL);
+                    $i++;
+                } while($i <= 10);*/
+
+
+                echo '<pre>';
+
+                $total = 12000;
+                //                                0      1      2       3      4       5
+                $animals = ['dog', 'cat', 'rat', 'lion', 'pig', 'rabbit'];
+
+                $cage = null;
+
+                foreach ($animals as $key => $animal) {
+                    $cage = $key;
+
+                    if ($animal === 'rat') {
+                        break;
                     }
 
-                    echo "<hr>";
-                    $i = 0;
+                    echo nl2br($animal . PHP_EOL);
+                }
 
-                    while ($i <= 10) {
-                        echo $i . '=';
-                        echo nl2br($a[$i] . PHP_EOL);
-                        $i++;
-                    }
+                //                    var_dump($cage);
 
-                    echo "<hr>";
-
-                    $i = 0;
-                    do {
-                        echo $i . '=';
-                        echo nl2br($a[$i] . PHP_EOL);
-                        $i++;
-                    } while($i <= 10);*/
-
-
-                    echo '<pre>';
-
-                    $total = 12000;
-                    $cardType = CARD_TYPE_MIR;
-
-                    foreach ($config['discount'] as $key => $value) {
-                        var_dump($key);
-                        var_dump($value['condition']($total));
-                        echo "<hr>";
-                    }
+                $cars = [
+                    [
+                        'mark' => 'BMW',
+                        'model' => 'X5',
+                        'number' => 421451
+                    ],
+                    [
+                        'mark' => 'Mercedes',
+                        'model' => 'e200',
+                        'number' => 421545
+                    ],
+                    [
+                        'mark' => 'Opel',
+                        'model' => 'Astra',
+                        'number' => 45454
+                    ]
+                ];
 
                 ?>
-
             </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Марка</th>
+                    <th>Модель</th>
+                    <th>Номер</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($cars as $car) :?>
+                    <tr>
+                        <td><?= $car['mark']?></td>
+                        <td><?= $car['model']?></td>
+                        <td><?= $car['number']?></td>
+                    </tr>
+                <?php endforeach;?>
+                </tbody>
+
+            </table>
+
+            <?php
+             $list = ['green', 'yellow', 'red', 'white', 'black']
+            ?>
+
+            <ul class="list-group">
+                <?php foreach ($list as $item) : ?>
+
+                    <li class="list-group-item"><?= $item?></li>
+
+                <?php endforeach;?>
+            </ul>
+
+            <?php
+
+                $posts = [
+                    [
+                        'title' => 'Пост',
+                        'description' => 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.',
+                        'img' => 'http://lorempixel.com/400/200'
+                    ],
+                    [
+                        'title' => 'Почему он используется?',
+                        'description' => 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).',
+                        'img' => 'http://lorempixel.com/400/200/sports'
+                    ]
+                ];
+            ?>
+
+            <div class="row">
+                <?php foreach ($posts as $post) :?>
+                    <div class="card col-md-6">
+                        <img class="card-img-top" src="<?= $post['img']?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $post['title']?></h5>
+                            <p class="card-text"><?= $post['description']?></p>
+                        </div>
+                    </div>
+                <?php endforeach;?>
+            </div>
+
         </div>
     </div>
 </div>
