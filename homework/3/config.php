@@ -111,7 +111,10 @@ $config = [
         2 => [
             'cardName' => 'Gold',
             'cardBank' => 'Приват',
-            'paymentSystem' => 'MasterCard'.' '.'VISA',
+            'paymentSystem' => [
+                                'MasterCard',
+                                'VISA'
+            ],
             'cardNumber' => 100005665563934123,
             'expirationDate' => 'Апрель 2019'
         ],
