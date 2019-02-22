@@ -39,4 +39,3 @@ var_dump($Kirill);
 
 unset($name, $kirill, $gender, $city); // Удалить все ранее созданные переменные
 ?>
-
