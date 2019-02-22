@@ -7,7 +7,7 @@
 <body>
 
 <?php
-
+//Выбор номера месяца
 $month = 6;
 
 switch ($month) {
