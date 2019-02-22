@@ -59,7 +59,7 @@ switch ($monthNumber) {
         break;
 }
 echo '<br>';
-$i = 0;
+$i = 1;
 while($i <= 40) {
     echo $i.' ';
     $i++;
