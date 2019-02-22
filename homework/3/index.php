@@ -1,49 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<?php  
+ 
+require 'setting.php';
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
+define (EIGHTIN_EARS, 18);
+$buyer_age = 28;
+$buyer_cash = 1000;
+$amount = 350;
+$alcohol = true or false;
+$procentOfDiscount = 5;
+$discount = $amount / 100 * $procentOfDiscount;
+$totalAmount = $amount - $discount;
+$change = $buyer_cash - $totalAmount;
 
-<div class="container-fluid mb-2">
-    <div class="row">
-        <div class="col-md-12">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">WebDevelopmentCourse</a>
-            </nav>
-        </div>
+echo "<hr>";
+echo nl2br ($shop[requisites]['name'] . PHP_EOL);
+echo nl2br ($shop[requisites]['address'] . PHP_EOL);
+echo nl2br ($shop[alcoholSection]['name'] . PHP_EOL);
 
-    </div>
-</div>
+echo "<hr>";
+if ($cards [2][ban] == TRUE) {
+  echo nl2br ('Карта заблокирована' . PHP_EOL);
+}
+  elseif ($cards [2][ban] !== TRUE) {
+    echo nl2br ('Карта ативна' . PHP_EOL);
+  }
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="alert alert-success">
+echo "<hr>";
+if ($buyer_age < EIGHTIN_EARS and $alcohol == true) {
+    echo "покупатель несовершеннолетний, в товарах присутствует алкоголь"; 
+  } 
+  else {
+    echo "Cумма покупки $amount рублей, <br>получено денег от покупателя $buyer_cash рублей, <br>скидка составила $discount рублей, <br>к оплате: $totalAmount, сдача: $change<br>";
 
-                <?php 
-                    include 'config.php';
-                    var_dump($zone);
-                ?>
+    if ($buyer_cash >= $totalAmount) {
+    echo "Оплата покупки произведена<br>";
+    }
+    elseif ($buyer_cash < $totalAmount) {
+    echo "недостаточно средств для оплаты товаров<br>";
+    }  
+if ($buyer_cash === $totalAmount + $change) {
+      echo "Спасибо за покупку<br>";
+      } 
+    }  
 
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+echo "<hr>";
+echo nl2br ($shop[alcoholSection][TimeOfWork]['monday'] . PHP_EOL) . nl2br ($shop[alcoholSection][TimeOfWork]['tuesday'] . PHP_EOL) . nl2br ($shop[alcoholSection][TimeOfWork]['wednesday'] . PHP_EOL) . nl2br ($shop[alcoholSection][TimeOfWork]['thursday'] . PHP_EOL) . nl2br ($shop[alcoholSection][TimeOfWork]['friday'] . PHP_EOL) . nl2br ($shop[alcoholSection][TimeOfWork]['saturday'] . PHP_EOL) . nl2br ($shop[alcoholSection][TimeOfWork]['sunday'] . PHP_EOL);
+?>
