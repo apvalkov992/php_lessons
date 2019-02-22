@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 /**
  *
  */
@@ -19,42 +19,42 @@ $month = 4;
 
 	switch ($month) {
 		case 1:
-			echo "ßíâàðü";
+			echo "Ð¯Ð½Ð²Ð°Ñ€ÑŒ";
 			break;
 		case 2:
-			echo "Ôåâðàëü";
+			echo "Ð¤ÐµÐ²Ñ€Ð°Ð»ÑŒ";
 			break;
 		case 3:
-			echo "Ìàðò";
+			echo "ÐœÐ°Ñ€Ñ‚";
 			break;
 		case 4:
-			echo "Àïðåëü";
+			echo "ÐÐ¿Ñ€ÐµÐ»ÑŒ";
 			break;
 		case 5:
-			echo "Ìàé";
+			echo "ÐœÐ°Ð¹";
 			break;
 		case 6:
-			echo "Èþíü";
+			echo "Ð˜ÑŽÐ½ÑŒ";
 			break;	
 		case 7:
-			echo "Èþëü";
+			echo "Ð˜ÑŽÐ»ÑŒ";
 			break;	
 		case 8:
-			echo "Àâãóñò";
+			echo "ÐÐ²Ð³ÑƒÑÑ‚";
 			break;
 		case 9:
-			echo "Ñåíòÿáðü";
+			echo "Ð¡ÐµÐ½Ñ‚ÑÐ±Ñ€ÑŒ";
 			break;
 		case 10:
-			echo "Îêòÿáðü";
+			echo "ÐžÐºÑ‚ÑÐ±Ñ€ÑŒ";
 			break;
 		case 11:
-			echo "Íîÿáðü";
+			echo "ÐÐ¾ÑÐ±Ñ€ÑŒ";
 			break;
 		case 12:
-			echo "Äåêàáðü";
+			echo "Ð”ÐµÐºÐ°Ð±Ñ€ÑŒ";
 			break;							
 		default:
-			echo "Íå ïîíÿòíî";
+			echo "ÐÐµ Ð¿Ð¾Ð½ÑÑ‚Ð½Ð¾";
 			break;
 	}
