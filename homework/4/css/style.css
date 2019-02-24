@@ -1,0 +1,9 @@
+.priceThousand{
+    color: yellow;
+    font-size: 170%;
+}
+.priceMillion {
+    color: yellow;
+    font-size: 200%;
+    font-weight: bolder;
+}
