@@ -16,8 +16,8 @@
 			.card-title {height:5%; text-align: left; font-weight:bold}
 			.card-text {height:15%; text-align: left;}
 			.card-img-top {width: 298px; height: 150px; object-fit: cover;}
-			.btn-price {font-weight:bold; text-align: left; display:inline-block; padding: 0px 65pt 0px 0px;}
-			.btn {text-align: right;}
+			.btn-price {font-weight:bold; text-align: left; display:inline-block; padding: 0px 60pt 0px 0px;}
+			.btn {text-align: right; font-weight:bold}
 			.btn-primary {text-align: right;}
 /*Немного CSS стилей от души еще никому не вредило (кроме самомнения заказчика)*/
   </style>
