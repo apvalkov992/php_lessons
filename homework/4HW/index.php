@@ -33,7 +33,6 @@
 	</div>
 	</table>
 <hr size="5" color="009900" >
-
 <?php require_once 'data/products.php' ?>
 	<div class="container">
 	  <ul class="list-group">
@@ -48,7 +47,6 @@
 	<div class="container-fluid">
 		<div class="row">
 <hr size="5" color="009900" >
-
 <?php
 // 3е задание не осилил... не совсем разобрался в его выполнении...
  ?>
