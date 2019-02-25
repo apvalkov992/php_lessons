@@ -5,9 +5,13 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 51fb0dc61ded9acc2a16bcef03e46676198d1b7f
 $name = 'My name';
+=======
+$name = 'Toxa2';
+>>>>>>> 69593889583b624af4ddfc0e8dccb8d0dd18abcd
 
 var_dump($name);
 =======
