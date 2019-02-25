@@ -1,20 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа №1</title>
+</head>
+<body>
 <?php
 /**
  *
  */
 $name = 'Olga';
 var_dump($name);
+
 /**    */
 
-$null_var=null;
-var_dump($null_var);
-$bool_var=true;
-var_dump($bool_var);
-$int_var=263;
-var_dump($int_var);
-$str_var='Stroka';
-var_dump($str_var);
-$float_var=252.369;
-var_dump($float_var);
+$null_=null;
+$bool_=true;
+$int_=263;
+$str_='Stroka';
+$float_=252.369;
+var_dump($null_, $bool_, $int_,$str_,$float_);
+//Создать переменную содержащую своё имя
+//Создать переменную названием которой будет своё имя а значением фамилия
+//Создать константу содержащую количество полных лет
+//Создать статическую переменную содержащую пол
+//Создать глобальную переменную содержащую название города
+//Удалить все ранее созданные переменные
+$name='Ольга';
+$Olga='Близкая';
+define('AGE',35);
+static $gender = 'Женский';
+$city = 'Город: ';
+function my_city() {
+    global $city;
+    $city .= 'Донецк';
+}
+my_city();
+echo '<br>'.$name.'<br>'.$Olga.'<br>'.AGE.'<br>'.$gender.'<br>'.$city.'<br>';
+unset($name,$Olga,$gender,$city);
+// unset(AGE);
+echo $name.'<br>'.$Olga.'<br>'.AGE.'<br>'.$gender.'<br>'.$city.'<br>';
 
-
+?>
+</body>
+</html>
