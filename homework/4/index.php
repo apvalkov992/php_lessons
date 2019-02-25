@@ -126,7 +126,7 @@ $users = [
 
 <!-- РАЗДЕЛИТЕЛЬНАЯ ЧЕРТА И ЗАГОЛОВОК -->
 <hr size="2" color="fff" >
-<h5 align="center"><font face="arial" color="#004694">Задание #3</font></h5>
+<h5 align="center"><font face="arial" color="#004694">Задание #2</font></h5>
 
 
 <!-- Задание #2 -->
