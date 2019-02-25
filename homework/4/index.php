@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Магазин мебели</title>
 	</head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<div class="container-fluid">
 	<?php require_once 'data/users.php' ?>
 	<table class="table">
