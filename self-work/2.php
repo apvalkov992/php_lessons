@@ -40,14 +40,7 @@ $month = "6";
  		
  			break;
 	}
-
 $i=0;
 while ($i++<40)
 	echo nl2br ($i . PHP_EOL);
-
 ?>
-
-
-
-
-
