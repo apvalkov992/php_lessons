@@ -10,8 +10,10 @@
 
 			.list-group1 {width:20%; padding: 0px 0px 2px 10px;}
 
-			.container{overflow:hidden; width: 1000px; margin:auto;}
-			.box div{width: 300px; height: 300px;  display:inline-block; margin:auto; }
+			/*.common-container{overflow:hidden; width: 2000px; margin:auto;display:inline-block;}*/
+			.container{overflow:hidden; margin:auto;}
+			.box {width: 300px; height: 300px;  display:inline-block; margin:auto; }
+			.div {width: 300px; height: 300px;  display:inline-block; margin:auto; }
 			.card-block{padding:5pt; text-align: right;}
 			.card-title {height:5%; text-align: left; font-weight:bold}
 			.card-text {height:15%; text-align: left;}
@@ -240,31 +242,16 @@ $goods = [
 		'description'	=> 'Стильный, изящный монитор стал обладателем безрамочного..',
 		'picture' 		=> 'https://i1.price.ua/images/model/23/3045694/2/1/type1/philips_328e8qjab5_3998800.jpg',
 		],		
-
-
-
-
 		];
 
-
-
-
-/*
-		foreach ($list as $value) :?>
-			<div class="list-group1" >
-				<a href="#" class="list-group-item list-group-item-action active"><?= $value ?></a>
-			</div>
-		<?php endforeach; ?>
-
-*/
-
-
 ?>
-<?php
 
+	
+	<div class="container">
+<?php
 foreach ($goods as $value) :?>
 
-	<div class="container">
+
 		<div class="box">
 
 			<div>
@@ -280,10 +267,10 @@ foreach ($goods as $value) :?>
 			</div>
 
 		</div>
-	</div>
+
 		<?php endforeach; ?>
 
-
+</div>
 
 <br>
 <br>
