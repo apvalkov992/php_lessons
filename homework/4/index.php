@@ -10,7 +10,6 @@
 
 			.list-group1 {width:20%; padding: 0px 0px 2px 10px;}
 
-			/*.common-container{overflow:hidden; width: 2000px; margin:auto;display:inline-block;}*/
 			.container{overflow:hidden; width: 1000px; margin:auto; }
 			.box {width: 300px; height: 300px;  display:inline-block;}
 			.div {width: 300px; height: 300px;  display:inline-block;}
