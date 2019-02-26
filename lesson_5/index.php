@@ -25,6 +25,27 @@
         <div class="col-md-12">
             <div class="alert alert-success">
 
+                <?php
+                    $a = 2;
+
+                    function name($a) {
+                        $a++;
+
+                        return $a;
+                    }
+
+                    $a = name($a);
+
+//                    var_dump($a);
+
+
+                    function fullName(string $firstName, string $secondName, string $middleName): string {
+                        return $firstName . ' ' . $secondName . ' ' . $middleName;
+                    }
+
+                    echo fullName('Вася', 'Пупкин', 'Иванович')
+                ?>
+
             </div>
         </div>
     </div>
