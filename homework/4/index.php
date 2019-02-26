@@ -40,10 +40,8 @@
                 <?php $config = require_once 'config.php'; ?>
 
             </div>
-            
-            <table class="table table-striped"> 
-                <h4>Таблица пользователей</h4>
-
+            <h4>Таблица пользователей</h4>
+            <table class="table table-striped">
                 <thead>
                 <tr>									<!--Создает строку таблицы. -->
                     <th>№</th>							<!--Создает заголовок ячейки таблицы. -->
@@ -55,12 +53,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php 
+                <?php
+                //var_dump($config);
 
-                foreach ($config[users] as $user) :?>		<!-- :?> и  < ?=  это разрыв в PHP ? -->
+
+                foreach ($config['users'] as $user) :?>
                     <tr>                                        <!--Создает строку таблицы. -->
                         <td><?= $user['id']?></td>				<!--td Создает ячейку таблицы. -->
-                        <td><?= $user['firstName']?></td>		<!-- < ?= -->
+                        <td><?= $user['firstName']?></td>
                         <td><?= $user['lastName'] ?></td>
                         <td><?= $user['login'] ?></td>
                         <td><?= $user['compName'] ?></td>
@@ -73,11 +73,11 @@
 
             <?php  
                 echo '<br><br><br>';
-                $list = $config[category]; 
+                $list = $config['category'];
             ?>
             <h4>Список</h4>
             <ol class="list-group">
-                <?php foreach ($list as $item) : ?>
+                <?php foreach($list as $item) : ?>
 
                     <li class="list-group-item"><?= $item?> </li>
 
@@ -86,9 +86,8 @@
 
             <?php
                 echo '<br><br><br>';
-                $cakes = $config[cakes];
+                $cakes = $config['cakes'];
             ?>
-
             <h4>Товары</h4>
             <div class="row">
                 <?php foreach ($cakes as $cake) :?>
