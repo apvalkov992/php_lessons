@@ -68,7 +68,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $good['title']?></h5>
                             <p class="card-text"><?= $good['description']?></p>
-                            <h3 align="right" class="card-header"><?= $good['price']?></h3>
+                            <h3 align="right" class="card-header" style="color: red;"><?= $good['price']?></h3>
                         </div>
                     </div>
                 <?php endforeach;?>
