@@ -175,6 +175,73 @@ $goods = [
 		'description'	=> 'Всего в комплекте поставки вы найдете один модуль ОЗУ..',
 		'picture' 		=> 'https://techprime.com.ua/63357-large_default/ddr3-2x4gb-1600-135v-kingston-hyperx-fury-black-hx316lc10fbk2-8.jpg',
 		],
+		[
+		'model' 		=> 'MSI GeForce GTX 1050 TI',
+		'price' 		=> '15 299',
+		'description'	=> 'Хищная красно-черная расцветка дополнена наличием двух..',
+		'picture' 		=> 'https://i1.price.ua/images/model/776/2379492/2/1/type1/msi_gtx_1050_ti_gaming_x_4g_3043452.png',
+		],
+		[
+		'model' 		=> 'Corsair Graphite Series 780T',
+		'price' 		=> '15 199',
+		'description'	=> 'Футуристический дизайн корпуса со сглаженными углами сразу..',
+		'picture' 		=> 'https://game-device.com/image/cache/catalog/pc_complect/korpus/corsair/Corsair_Graphite_Series_780T_White-1500x700.png',
+		],
+		[
+		'model' 		=> 'Corsair CX 550M',
+		'price' 		=> '6 499',
+		'description'	=> 'Благодаря габаритам 140x150x86 мм представленное комплектующее..',
+		'picture' 		=> 'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020121-EU-CX550_004.png',
+		],
+		[
+		'model' 		=> 'Intel Core i5-7400 BOX',
+		'price' 		=> '14 799',
+		'description'	=> 'Совокупность технических параметров обеспечивает..',
+		'picture' 		=> 'https://static3.nordic.pictures/17178067-thickbox_default/intel-core-i5-7400-box.jpg',
+		],
+
+		[
+		'model' 		=> 'ASUS ROG STRIX X299-XE GAMING',
+		'price' 		=> '28 299',
+		'description'	=> 'Благодаря процессорному разъему LGA 2066 модель поддерживает..',
+		'picture' 		=> 'https://pcaccesorios.com.mx/wp-content/uploads/2018/08/ROG-STRIX-X299-XE-GAMINGa-500x500.png',
+		],		[
+		'model' 		=> 'GIGABYTE GA-Z170X-Gaming G1',
+		'price' 		=> '40 999',
+		'description'	=> 'Высокий рабочий потенциал гарантирован при двухканальном..',
+		'picture' 		=> 'https://images-na.ssl-images-amazon.com/images/I/71rvqW0MLfL._SX679_.jpg',
+		],
+				[
+		'model' 		=> 'Kingston HyperX FURY Red',
+		'price' 		=> '10 999',
+		'description'	=> 'Тактовая частота модели достигает 2.4 ГГц, а ее пропускная способность..',
+		'picture' 		=> 'https://33.img.avito.st/640x480/5137486933.jpg',
+		],
+		[
+		'model' 		=> 'AMD FX-8300 BOX',
+		'price' 		=> '5 199 ₽',
+		'description'	=> 'Базовая частота процессора составляет 3300 МГц, а максимально..',
+		'picture' 		=> 'https://www.alternate.co.uk/p/1200x630/h/AMD_FX_8300_processor_3_3_GHz_Box_8_MB_L2@@ha8a27.jpg',
+		],		[
+		'model' 		=> '1 ТБ Жесткий диск WD Purple',
+		'price' 		=> '3 999 ₽',
+		'description'	=> 'Устройство обладает довольно высокой скоростью передачи..',
+		'picture' 		=> 'https://sec-market.com.ua/263-large_default/wd-purple-wd10purx-1-tb-zhestkiy-disk-hdd.jpg',
+		],
+				[
+		'model' 		=> 'HyperX Alloy FPS Mechanical',
+		'price' 		=> '8 499',
+		'description'	=> 'Она характеризуется механическим ходом клавиш с технологией..',
+		'picture' 		=> 'https://www.fantastic.md/images/cache/goods_image/big/goods_image_154496.jpg',
+		],
+		[
+		'model' 		=> '31.5" Монитор Philips E Line',
+		'price' 		=> '20 299',
+		'description'	=> 'Стильный, изящный монитор стал обладателем безрамочного..',
+		'picture' 		=> 'https://i1.price.ua/images/model/23/3045694/2/1/type1/philips_328e8qjab5_3998800.jpg',
+		],		
+
+
 
 
 		];
@@ -187,7 +254,7 @@ $goods = [
 			<div class="list-group1" >
 				<a href="#" class="list-group-item list-group-item-action active"><?= $value ?></a>
 			</div>
-		<?pыhp endforeach; ?>
+		<?php endforeach; ?>
 
 */
 
