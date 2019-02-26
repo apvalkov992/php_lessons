@@ -38,8 +38,7 @@
 <ul class="list-group">
     <?php foreach ($categoryList as $key => $item) :?>
 
-        <li class="list-group-item">
-            <?= $key?>
+        <li class="list-group-item"><?= $key?>
             <ul class="list-group">
 
             <?php foreach ($item as $subkey => $subitem) :?>
