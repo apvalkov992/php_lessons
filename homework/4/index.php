@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="alert alert-success">
+            <div class="">
 
             </div>
             <?php
@@ -47,7 +47,7 @@
                 require_once 'data/categories.php';
             ?>
 
-            <ul class="list-group">
+            <ul class="list-group" style="margin-bottom: 20px">
                 <?php foreach ($categories as $category) : ?>
 
                     <li class="list-group-item"><?= $category?></li>
@@ -63,12 +63,15 @@
 
             <div class="row">
                 <?php foreach ($goods as $good) :?>
-                    <div class="card col-md-6">
+                    <div class="card col-md-3" style="padding: 0; margin: 20px">
                         <img class="card-img-top" src="data/<?= $good['img']?>" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title"><?= $good['title']?></h5>
                             <p class="card-text"><?= $good['description']?></p>
-                            <h3 align="right" class="card-header" style="color: red;"><?= $good['price']?></h3>
+                            <h3 align="right" class="card-footer text-muted" style="color: red!important;"><?= $good['price'].'$'?></h3>
+                            <div class="card-footer text-muted text-center">
+                                2 days ago
+                            </div>
                         </div>
                     </div>
                 <?php endforeach;?>
