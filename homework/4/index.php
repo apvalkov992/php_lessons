@@ -11,9 +11,9 @@
 			.list-group1 {width:20%; padding: 0px 0px 2px 10px;}
 
 			/*.common-container{overflow:hidden; width: 2000px; margin:auto;display:inline-block;}*/
-			.container{overflow:hidden; margin:auto;}
-			.box {width: 300px; height: 300px;  display:inline-block; margin:auto; }
-			.div {width: 300px; height: 300px;  display:inline-block; margin:auto; }
+			.container{overflow:hidden; width: 1500px; margin:auto; }
+			.box {width: 300px; height: 300px;  display:inline-block;}
+			.div {width: 300px; height: 300px;  display:inline-block;}
 			.card-block{padding:5pt; text-align: right;}
 			.card-title {height:5%; text-align: left; font-weight:bold}
 			.card-text {height:15%; text-align: left;}
