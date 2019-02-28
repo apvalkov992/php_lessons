@@ -25,9 +25,31 @@
         <div class="col-md-12">
             <div class="alert alert-success">
 
-                <?php include 'work3/shoping.php'?>
+                <?php
+               
+                $userName = ['Антон','Кирилл','Егор','Денис','Влад'];
+                function findName (string $userName, $name) 
+                {
+                foreach ($userName as $name) {
+
+                        if ($name !='Кирилл') {
+                        continue; 
+                        }
+                        else {
+                            echo $name;
+                        }
+                        }
+
+                    }
                 
+
+
+
+
+                ?>
+              
             </div>
+
         </div>
     </div>
 </div>
