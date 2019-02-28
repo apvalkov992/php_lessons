@@ -6,12 +6,24 @@
         '4',
         9
     ];
-    function searchInMas(array $m, int $k) { // массив, номер
+    function searchInMas(array $m, /* int */$k) {
         foreach ($m as $key => $value) {
-            if ($key == $k) {
+            if ($key ==/*=*/ $k) {
                 return $value;
             }
         }
+        //return null;
     }
-    echo searchInMas($mas, 4);
+    echo searchInMas($mas, 1);
+    echo '<br>';
+    function abc(Closure $callback) {
+        $a = 1 + 2;
+        echo $callback($a);
+    }
+
+    abc(function($a){
+        echo $a.'<br>';
+        $a = 2;
+        echo $a.'<br>';
+    })
 ?>
