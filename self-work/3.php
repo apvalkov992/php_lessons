@@ -1,5 +1,6 @@
 <?php	
-	function search($arr, $to_search){
+	function search([], $to_search){
+		
 		foreach ($arr as $i) {
 			if($i === $to_search){
 				return i;
