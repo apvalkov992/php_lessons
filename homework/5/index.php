@@ -16,7 +16,6 @@
         return $arr;
     }
     print_r(expl($str,'/'));*/
-
     $str = "http://lessons.loc:81/homework/5/";
     function customExplode (string $string, string $delimeter , int $limit = PHP_INT_MAX) : array {
         $result = [];
@@ -24,7 +23,6 @@
         $key = 0;
         $substring = '';
         $lengthStr = strlen($string);
-
         for ($i = 0; $i < $lengthStr; $i++) {
             if ($key + 1 === $limit) {
                 $result[$key] = substr($string,$i,$lengthStr);
@@ -57,7 +55,6 @@
     function customSubString (string $s, int $start, int $len = 0 ) : string {
         if ($len == 0) 
             $len = strlen($s);
-
         $newStr = '';
         for ($i=$start; $i < $len; $i++) {
             $newStr .= $s[$i];
@@ -65,11 +62,8 @@
         return $newStr;
     }
     echo customSubString($str,5,12);
-
     echo '<br>';
     echo '<br>';   
-
-
     $array = ['abcdef','gh','ij','k',' ','lmnop','qrst','uv',' ','wxyz'];
     $initial = "1";
     function arrayReduce (array $arr, Closure $calb, $init = NULL) {
@@ -86,10 +80,8 @@
         $carry .= $item;
         return $carry;
     },$initial));
-
     echo '<br>';
     echo '<br>';  
-
     $array = ['abcdef','gh','ij','k',' ','lmnop','qrst','uv',' ','wxyz'];
     function customImplode (string $glue = '', array $array) : string {
         $resultStr = '';
@@ -107,7 +99,6 @@
     echo implode(',',$array);
     echo '<br>';
     echo '<br>';  
-
     $myArr = ['1',2,3,4,5,6,8,9];
     function myCount (array $array) : int {
         $result = 0;
@@ -117,7 +108,6 @@
         return $result;
     }
     echo myCount($myArr);
-
     echo '<br>';
     echo '<br>';
     $input_array = ['a', 'b', 'c', 'd', 'e','g','h'];
