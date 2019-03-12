@@ -22,65 +22,61 @@
                 color: #17a2b8;
             }
             #buttonSubmit {
-
+                display: block;
+                margin: 20px auto;
             }
         </style>
     </head>
     <body>
-        <pre>
-        <?php
-            require_once('validate.php');
-            /*echo $validate.'<br>';*/
-            $result = validator($_POST);
-        ?>
-        </pre>
+    <?php
+        require_once('validate.php');
+        $result = validator($_POST);
+        $errors = [];
+
+        if(!is_array($result)) {
+            require_once('files.php');
+            if ($_POST && $_FILES) {
+                savePictures($_POST,$_FILES);
+            }
+            else {
+                $errors[] = true;
+            }
+        }
+        else {
+            foreach ($result as $key => $value) {
+                $errors[$value] = true;
+            }
+        }
+    ?>
     <div class="container">
         <div class="row">
             <?php  
-            $errors = [];
             if(!is_array($result)) {
-                showNewProduct($_POST);
-            }
-            else {
-                foreach ($result as $key => $value) {
-                    $errors[$value] = true;
-                }
+                showNewProduct();
             }
             ?>
         </div>
     </div>
     <div class="container">
         <div class="formBlock">
-            <form action="6.php" method="post">
+            <form action="files.php" method="post" enctype="multipart/form-data">
                 <span>Введите название продукта:</span>
                 <input class="form-control" type="text" placeholder="Название продукта" name="productName">
                 <?=($errors['productName']) ? '<span style="color:red;">Проверьте правильность заполнения поля</span>' : '' ;?>
-                <div class="row">
-
-                    <div class="col">
-                        <span>Введите телефон:</span>
-                        <input class="form-control" type="text" placeholder="Телефон" name="contactPhone">
-                            <?=($errors['contactPhone']) ? '<span style="color:red;">Проверьте правильность заполнения телефона</span>' : '' ;?>
-
-                    </div>
-
-                    <div class="col">
-                        <span>Введите ваш email:</span>
-                        <input class="form-control" type="email" placeholder="Email" name="contactEmail">
-                        <?=($errors['contactEmail']) ? '<span style="color:red;">Проверьте правильность заполнения email</span>' : '' ;?>
-
-                    </div>
-
-                </div>
 
                 <div class="form-group">
                     <label for="formRubric">Рубрика</label>
                     <select class="form-control" id="formRubric" name="formRubric">
-                        <option>Компьютерная техника</option>
-                        <option>Недвижимость</option>
-                        <option>Транспорт</option>
-                        <option>Спорт</option>
-                        <option>Животные</option>
+                        <?php 
+                        $handle = fopen("database".DIRECTORY_SEPARATOR."Категории товаров.csv", "r");
+                        while (($data = fgetcsv($handle) ) !== FALSE):?>
+                            <option>
+                            <?php
+                                foreach ($data as $value) 
+                                    echo $value;
+                            ?>  
+                            </option>
+                        <?php endwhile; fclose($handle);?>
                     </select>
                 </div>
 
@@ -104,11 +100,34 @@
                     <textarea class="form-control" id="formDescription" name="description" rows="3"></textarea>
                     <?=($errors['description']) ? '<span style="color:red;">Введите больше символов</span>' : '' ;?>
                 </div>
-                
+
+                <div class="row">
+                    <div class="col">
+                        <span>Введите телефон:</span>
+                        <input class="form-control" type="text" placeholder="Телефон" name="contactPhone">
+                            <?=($errors['contactPhone']) ? '<span style="color:red;">Проверьте правильность заполнения телефона</span>' : '' ;?>
+
+                    </div>
+
+                    <div class="col">
+                        <span>Введите ваш email:</span>
+                        <input class="form-control" type="email" placeholder="Email" name="contactEmail">
+                        <?=($errors['contactEmail']) ? '<span style="color:red;">Проверьте правильность заполнения email</span>' : '' ;?>
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="files">Выберите изображения товара</label>
+                    <br>
+                    <input type="file" name="productFiles[]" accept="image/*"  multiple id="files">
+                </div>
+
                 <span>Введите цену продукта:</span>
                 <input class="form-control" type="text" placeholder="0.00" name="productCost">
                 <?=($errors['productCost']) ? nl2br('<span style="color:red;">Не правильно указана цена!</span>'.PHP_EOL) : '' ;?>
-                <input type="submit" class="form-control" id="buttonSubmit">
+                <input type="submit" class="btn btn-primary" id="buttonSubmit">
             </form>
         </div>
     </div>
