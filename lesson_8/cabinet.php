@@ -1,13 +1,9 @@
 <?php
-
 require_once 'core/session.php';
-
 if (!isset($_SESSION['user'])) {
     $_SESSION['errors'] = 'Нет доступа';
-
     header('Location: http://lessons.loc/lesson_8/index.php/');
 }
-
 ?>
 
 <!DOCTYPE html>
