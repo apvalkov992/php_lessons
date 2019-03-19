@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home work 7</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-
-<div class="container-fluid mb-2">
-    <div class="row">
-        <div class="col-md-12">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">WebDevelopmentCourse</a>
-            </nav>
-        </div>
-
-    </div>
-</div>
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="alert alert-success">
-
-                
-
-            </div>
-        </div>
-    </div>
-</div>
+<?php
+$goods = array_map('str_getcsv', file('../7/store/filebase.csv'));
+//var_dump($goods)
+?>
+<table>
+    <thead>
+    <tr>
+        <th>Заголовок</th>
+        <th>Категория</th>
+        <th>Цена</th>
+        <th>Описание</th>
+        <th>Картинки</th>
+    </tr>
+    </thead>
+    <tbody>
+                    <?php foreach ($goods as $good) :?>
+    <tr>
+        <td><?= $good[0]?></td>
+        <td><?= $good[1]?></td>
+        <td><?= $good[2]?></td>
+        <td><?= $good[3]?></td>
+        <td><img src="<?= $good[5]?>" alt="" width="100"></td>
+    </tr>
+<?php endforeach;?>
+</tbody>
+</table>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

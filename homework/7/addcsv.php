@@ -1,36 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home work 7</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
-<div class="container-fluid mb-2">
-    <div class="row">
-        <div class="col-md-12">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">WebDevelopmentCourse</a>
-            </nav>
-        </div>
-
+<form method="post" action="functions/importcsv.php" enctype="multipart/form-data">
+    <div class="container-fluid mb-2">
+    <div class="form-group" >
+        <label for="exampleFormControlFile1">Выберите csv файл</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="csvFile">
     </div>
-</div>
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="alert alert-success">
-
-                
-
-            </div>
-        </div>
+    <div class="form-group">
+        <label for="exampleFormControlFile2">Выберите изображения</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile2" multiple name="imagecsv[]">
     </div>
-</div>
+        <button type="submit" class="btn btn-primary">Импорт</button>
+    </div>
+</form>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

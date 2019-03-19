@@ -25,8 +25,8 @@
         <div class="col-md-12">
             <div class="alert alert-success">
 
-                
-
+                <?php include 'shopconf.php'?>
+                <?php var_dump($buyerBlacklist)?>
             </div>
         </div>
     </div>
