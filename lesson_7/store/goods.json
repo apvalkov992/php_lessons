@@ -1,0 +1,21 @@
+[
+  {
+    "title": "\u041d\u043e\u0443\u0442\u0431\u0443\u043a Asus",
+    "price": "15000",
+    "description": "\u0425\u043e\u0440\u043e\u0448\u0438\u0439 \u043d\u043e\u0443\u0442\u0431\u0443\u043a",
+    "images": [
+      "..\\images\\17\\7\\177c67aefdf205922f4f1707a85c74a2.jpg",
+      "..\\images\\b6\\5\\b653c5c82d551923dc6a70893ae738e2.jpg"
+    ],
+    "created_at": "09-03-2019 16:54:52"
+  },
+  {
+    "title": "\u041d\u043e\u0443\u0442\u0431\u0443\u043a Acer",
+    "price": "17000",
+    "description": "\u0421\u0443\u043f\u0435\u0440 \u043d\u043e\u0443\u0442\u0431\u0443\u043a",
+    "images": [
+      "..\\images\\70\\9\\7093e56096cecb429a68dd1dd382050f.png"
+    ],
+    "created_at": "09-03-2019 16:55:31"
+  }
+]
