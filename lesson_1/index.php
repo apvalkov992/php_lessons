@@ -1,6 +1,5 @@
 <?php
-
-$message = 'Hello world!!!!'
+	$message = 'Hello world!!!!'
 ?>
 
 <!DOCTYPE html>

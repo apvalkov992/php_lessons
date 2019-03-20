@@ -12,7 +12,7 @@ function store(string $fileKey) {
             $file = '';
             $filePath = createFilePath($fileName);
 
-            if ($_FILES[$fileKey]['errors'][$key]) {
+            if ($_FILES[$fileKey]['errors'][$key]) { 
                 continue;
             }
 
