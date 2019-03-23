@@ -1,9 +1,5 @@
 <?php
-require_once 'core/session.php';
-if (!isset($_SESSION['user'])) {
-    $_SESSION['errors'] = 'Нет доступа';
-    header('Location: http://lessons.loc/lesson_8/index.php/');
-}
+    require_once 'app/app.php';
 ?>
 
 <!DOCTYPE html>
@@ -26,15 +22,7 @@ if (!isset($_SESSION['user'])) {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#"><?= $_SESSION['user']['email']?></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/lesson_8/core/logout.php">Logout</a>
-                        </li>
 
-                    </ul>
                 </div>
             </nav>
         </div>

@@ -25,7 +25,6 @@
         <div class="col-md-12">
             <div class="alert alert-success">
 
-                <?php include 'data/cart.php'?>
 
             </div>
         </div>
