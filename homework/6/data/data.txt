@@ -1,1 +1,0 @@
-a:4:{s:9:"goodsName";s:5:"12333";s:8:"categori";s:16:"Ноутбуки";s:5:"price";s:2:"23";s:16:"goodsDescription";s:16:"1234123412341234";}
