@@ -168,3 +168,5 @@ $greenHall = new CinemaHall('Зелёный зал', 90);
 $blackHall = new CinemaHall('Черный зал', 90);
 
 
+
+
