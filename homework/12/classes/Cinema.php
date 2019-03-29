@@ -48,7 +48,7 @@ class User
 
 class Film
 {
-    private $title;
+    public $title;
 
     private $duration;
 
@@ -84,17 +84,6 @@ class Film
         return $this->title;
     }
 
-    public function moreDetails() : array { // Инфо о фильме
-        return [
-            $this->title,
-            $this->duration,
-            $this->genre,
-            $this->startPremier,
-            $this->endPremier,
-            $this->ageLimit,
-            $this->language
-        ];
-    }
 }
 
 class CinemaHall
@@ -122,7 +111,7 @@ class Ticket
 {
     private $number;
 
-    private $price;
+    public $price;
 
     private $seat;
 
@@ -185,10 +174,12 @@ class Schedule
     public function show() {
         echo 'Дата начала показа: '.$this->start_at->format('d.m.Y H:i').'<br>';
         echo 'Дата завершения показа: '.$this->start_at->format('d.m.Y H:i').'<br>';
+/*        echo '<pre>';
+        foreach ($this->items[0] as $film) {
+            print_r($this->items[0]);
+        };
+        echo '</pre>';*/
 
-        foreach ($items as $item) {
-            $item->show();
-        }
     }
 
     public function returnItems() {
@@ -215,14 +206,10 @@ class ScheduleItem
         $this->start_at = $start_at;
     }
 
-    public function show() { // Дописать детали фильма 
-        echo '';
-        echo 'Начало фильма: '.$this->start_at->format('d.m.Y H:i').'<br>';
+    public function returnFilm() {
+        return $this->film;
     }
 
-    public function returnTickets() {
-        return $this->tickets;
-    }
 }
 
 class TicketWindow
@@ -243,6 +230,10 @@ class TicketWindow
     public function returnShedule() {
         return $this->schedule;
     }
+
+    public function returnTotal() {
+        return $this->total;
+    }
 }
 
 class CalculateTotal {
@@ -253,16 +244,17 @@ class CalculateTotal {
 
     public function __construct(TicketWindow $ticketWindow) {
         $this->ticketWindow = $ticketWindow;
+        $this->total = $ticketWindow->returnTotal();
     }   
 
     public function showTotalTicketWindow() {
         if ($this->ticketWindow) {
-            echo '<pre>';
-            foreach ($this->ticketWindow->returnShedule()->returnItems() as $value) {
-                echo '1';
+            if ($this->ticketWindow->returnShedule()->returnItems()[2]) { // Обращение к билетам ????
+                foreach ($this->ticketWindow->returnShedule()->returnItems()[2] as $ticket) {
+                    $this->total += $ticket->showPrice();
+                };
             }
-            //var_dump($this->ticketWindow->returnShedule()->returnItems());
-            echo '</pre>';
+            echo 'В кассе: '.$this->total.' тугриков'.'<br>';
         }
         else {
             echo 'Данная касса не существует'.'<br>';
@@ -315,8 +307,8 @@ $schedule3->addItem($scheduleItem2);
 
 // Кассы
 $ticketWindow = new TicketWindow($jhon, $schedule1, 4000);
-$ticketWindow2 = new TicketWindow($jhon, $schedule2);
-$ticketWindow2 = new TicketWindow($jhon, $schedule3);
+$ticketWindow2 = new TicketWindow($jhon, $schedule2, 100);
+$ticketWindow3 = new TicketWindow($jhon, $schedule3);
 
 
 
@@ -332,3 +324,11 @@ echo '------------------------'.'<br>';
 
 $totalTicketWIndow = new CalculateTotal($ticketWindow);
 $totalTicketWIndow->showTotalTicketWindow();
+
+$totalTicketWIndow2 = new CalculateTotal($ticketWindow2);
+$totalTicketWIndow2->showTotalTicketWindow();
+echo '------------------------'.'<br>';
+
+$schedule1->show();
+$schedule2->show();
+$schedule3->show();
