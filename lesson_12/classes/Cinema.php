@@ -1,5 +1,10 @@
 <?php
 
+namespace lesson_12;
+
+use DateTime;
+use DateInterval;
+
 // User, CinemaHall, Film, Ticket, Schedule, TicketWindow
 
 class User
@@ -12,6 +17,11 @@ class User
     {
         $this->age = $age;
         $this->cash = $cash;
+    }
+
+    public function getAge()
+    {
+        return $this->age;
     }
 }
 
@@ -46,6 +56,11 @@ class Film
         $this->startPremier = $startPremier;
         $this->endPremier = $endPremier;
         $this->ageLimit = $ageLimit;
+        $this->language = $language;
+    }
+
+    public function setLanguage(string $language)
+    {
         $this->language = $language;
     }
 }
@@ -167,4 +182,8 @@ $redHall = new CinemaHall('Красный зал', 120);
 $greenHall = new CinemaHall('Зелёный зал', 90);
 $blackHall = new CinemaHall('Черный зал', 90);
 
+$clone = clone $chops;
 
+echo '<pre>';
+$clone->setLanguage('En');
+var_dump($clone, $chops);

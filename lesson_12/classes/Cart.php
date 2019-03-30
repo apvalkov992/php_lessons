@@ -1,5 +1,7 @@
 <?php
 
+namespace lesson_12;
+
 class Cart
 {
     private $items;

@@ -1,0 +1,14 @@
+{
+    "authors": [
+        {
+            "name": "apvalkov",
+            "email": "toxa.4ela@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App"
+        }
+    },
+    "require": {}
+}
