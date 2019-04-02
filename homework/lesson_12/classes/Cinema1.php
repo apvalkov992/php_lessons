@@ -1,10 +1,5 @@
 <?php
 
-namespace lesson_12;
-
-use DateTime;
-use DateInterval;
-
 // User, CinemaHall, Film, Ticket, Schedule, TicketWindow
 
 class User
@@ -19,10 +14,6 @@ class User
         $this->cash = $cash;
     }
 
-    public function getAge()
-    {
-        return $this->age;
-    }
 }
 
 class Film
@@ -56,11 +47,6 @@ class Film
         $this->startPremier = $startPremier;
         $this->endPremier = $endPremier;
         $this->ageLimit = $ageLimit;
-        $this->language = $language;
-    }
-
-    public function setLanguage(string $language)
-    {
         $this->language = $language;
     }
 }
@@ -107,6 +93,22 @@ class Ticket
         $this->film = $film;
         $this->start_at = $start_at;
     }
+
+    /**
+     * @return int
+     */
+    public function getNumber(): int
+    {
+        return $this->number;
+    }
+
+    /**
+     * @param int $number
+     */
+    public function setNumber(int $number): void
+    {
+        $this->number = $number;
+    }
 }
 
 class Schedule
@@ -147,6 +149,30 @@ class ScheduleItem
         $this->tickets = $tickets;
         $this->start_at = $start_at;
     }
+
+    /**
+     * @return array
+     */
+    public function createTickets(): array
+    {
+        if (count($this->tickets) > $this->cinemaHall->seatsCount ){
+            array_slice($this->tickets,0,seatsCount-1);
+        }
+
+        $i=1;
+        foreach($this->tickets as $ticket){
+            $ticket['number'] = $i ;
+            $ticket['price']  = 100;
+            $ticket['seat']  = $i;
+            $ticket['CinemaHall']  = $this->cinemaHall;
+            $ticket['film']  = $this->film;
+            $ticket['start_at']  = $this->start_at;
+            $i++;
+        }
+
+        return $this->tickets;
+    }
+
 }
 
 class TicketWindow
@@ -163,6 +189,7 @@ class TicketWindow
         $this->schedule = $schedule;
         $this->total = $total;
     }
+
 }
 
 // Пользователи
@@ -182,8 +209,4 @@ $redHall = new CinemaHall('Красный зал', 120);
 $greenHall = new CinemaHall('Зелёный зал', 90);
 $blackHall = new CinemaHall('Черный зал', 90);
 
-$clone = clone $chops;
 
-echo '<pre>';
-$clone->setLanguage('En');
-var_dump($clone, $chops);

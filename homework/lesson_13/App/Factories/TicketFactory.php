@@ -19,7 +19,7 @@ class TicketFactory
         while ($count > 0) {
             $result[] = new Ticket(
                 $seatsCount,
-                rand(300, 400),
+                rand(100, 400),
                 $seatsCount,
                 $cinemaHall,
                 $film,

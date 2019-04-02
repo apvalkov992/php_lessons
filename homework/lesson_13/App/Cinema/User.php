@@ -18,4 +18,16 @@ class User
     {
         return $this->age;
     }
+
+
+    public function getCash(): float
+    {
+        return $this->cash;
+    }
+
+    public function setCash(float $cash): void
+    {
+        $this->cash = $cash;
+    }
+
 }

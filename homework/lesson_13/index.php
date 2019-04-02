@@ -4,13 +4,21 @@ require __DIR__.'/vendor/autoload.php';
 
 use App\Factory\UserFactory;
 use App\Factory\FilmFactory;
-use \App\Factory\CinemaHallsFactory;
+use App\Factory\CinemaHallsFactory;
 use App\Factory\ScheduleFactory;
+use App\Factory\TicketWindowFactory;
 
-$users = UserFactory::generate(100);
+$users = UserFactory::generate(4);
 $films = FilmFactory::generate();
 $cinemaHalls = CinemaHallsFactory::generate();
 $schedules = ScheduleFactory::generate($films, $cinemaHalls);
+
+
+$buyTickets = TicketWindowFactory::generate($users,$schedules,1);
+//echo '<pre>';
+print_r ($buyTickets);
+
+//var_dump($users);
 
 ?>
 
@@ -75,6 +83,7 @@ $schedules = ScheduleFactory::generate($films, $cinemaHalls);
                     <?php endforeach;?>
 
                     <?php endforeach;?>
+
 
                 </tbody>
             </table>

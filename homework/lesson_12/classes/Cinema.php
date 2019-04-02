@@ -1,6 +1,5 @@
 <?php
 
- 
 // User, CinemaHall, Film, Ticket, Schedule, TicketWindow
 
 class User
@@ -12,6 +11,18 @@ class User
     public function __construct(int $age, float $cash)
     {
         $this->age = $age;
+        $this->cash = $cash;
+    }
+
+
+    public function getCash(): float
+    {
+        return $this->cash;
+    }
+
+
+    public function setCash(float $cash): void
+    {
         $this->cash = $cash;
     }
 }
@@ -178,6 +189,16 @@ class ScheduleItem
         $this->tickets = $tickets;
         $this->start_at = $start_at;
     }
+
+    /**
+     * @return array
+     */
+    public function getTickets(): array
+    {
+        return $this->tickets;
+    }
+
+
 }
 
 class CreateTickets
@@ -211,16 +232,75 @@ class TicketWindow
 {
     private $user;
 
-    private $schedule;
+    private $scheduleItem;
 
     private $total;
 
-    public function __construct(User $user, Schedule $schedule, float $total = 0)
+    //private $ticket;
+    private $tickets;
+    private $countTickets;
+
+
+    public function __construct(User $user, ScheduleItem $scheduleItem,int $countTickets, float $total = 0)
     {
         $this->user = $user;
-        $this->schedule = $schedule;
+        $this->scheduleItem = $scheduleItem;
         $this->total = $total;
+        $this->countTickets = $countTickets;
+
     }
+
+
+    public function buyTickets(): array
+    {
+        $buyTickets = [];
+
+        $this->tickets = $this->scheduleItem->getTickets();
+        //echo 'Доступные билеты  ';
+        //print_r($this->tickets);
+        if (count($this->tickets) < $this->countTickets)
+            echo 'Не хватает билетов';
+        else {
+            for ($i =1; $i <= $this->countTickets;  $i++) {
+                $price = $this->tickets[$i]->getPrice();
+                $cash = $this->user->getCash();
+                $this->total += $price ;
+                if ($cash >= $price){
+                    $this->user->setCash($cash - $price );
+                    $buyTickets[] = $this->tickets[$i];
+                }
+                else {
+                    echo 'Не хватет кэша';
+                }
+
+
+            }
+            $this->tickets = array_splice($this->tickets, $this->countTickets );
+        }
+
+        //print_r($buyTickets);
+        //print_r($this->total);
+        //print_r($this->tickets);
+
+        return $buyTickets;
+    }
+
+
+    public function getTotal(): float
+    {
+        return $this->total;
+    }
+
+    public function getTickets()
+    {
+        return $this->tickets;
+    }
+
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
 }
 
 // Пользователи
@@ -241,17 +321,33 @@ $greenHall = new CinemaHall('Зелёный зал', 90);
 $blackHall = new CinemaHall('Черный зал', 90);
 
 
-
 $seanceTicket = new Ticket(0, 150, 0, $blackHall,$chops,  new DateTime('+1 day'));
 
 $createTickets = new createTickets($seanceTicket, 5 );
 
 $printedSeanceTickets = $createTickets->printTickets();
 
-
 $seance = new ScheduleItem($chops,$blackHall,$printedSeanceTickets, new DateTime('+1 day') );
 echo '<pre>', '<br>','<br>';
-print_r ($seance);
+//print_r ($seance);
+
+$ticketWindow = new TicketWindow($vasya, $seance, 2 );
+echo  '<br>','<br>' , 'Купленные билеты : ';
+print_r ($ticketWindow->buyTickets());
+
+echo  '<br>','<br>' , 'Зритель ';
+print_r ($ticketWindow->getUser());
+
+echo  '<br>','<br>', 'Доход в кассу : ';
+print ($ticketWindow->getTotal());
+
+echo  '<br>','<br>', 'Остались билеты : ';
+print_r ($ticketWindow->getTickets());
+
+
+
+
+//print_r ($ticketWindow->getTotal());
 
 //$end_time = $seanceTicket->getStartAt() + $seanceTicket->getFilm()->getDuration();
 
