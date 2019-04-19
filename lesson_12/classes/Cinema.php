@@ -173,10 +173,12 @@ $jhon = new User(18, 4000);
 
 //Фильмы
 
-$chops = new Film('Челюсти', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'));
-$chops2 = new Film('Челюсти 2', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'));
-$chops3 = new Film('Челюсти 3', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'));
-$chops4 = new Film('Челюсти 4', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'));
+$chops = new Film('Челюсти', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'), 18);
+$chops2 = new Film('Челюсти 2', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'), 18);
+$chops3 = new Film('Челюсти 3', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'), 18);
+$chops4 = new Film('Челюсти 4', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'), 18);
+$chops4 = new Film('Мультяфки', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'));
+$chops4 = new Film('Мультяфки 2', new DateInterval('PT90M'), 'ужасы', new DateTime('-1 day'),  new DateTime('+1 day'));
 
 $redHall = new CinemaHall('Красный зал', 120);
 $greenHall = new CinemaHall('Зелёный зал', 90);
